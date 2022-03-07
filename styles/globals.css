@@ -55,7 +55,7 @@
 	}
 
 	.content-container {
-		@apply flex flex-col bg-gray-300 dark:bg-gray-700 m-0 h-full w-full overflow-hidden;
+		@apply pt-16 pl-2 flex flex-col bg-gray-300 dark:bg-gray-700 m-0 h-full w-full overflow-hidden;
 	}
 
 	.content-list {
