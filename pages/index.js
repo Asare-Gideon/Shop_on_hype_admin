@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { BiBarChartAlt } from "react-icons/bi";
 import PieChartComponent from "../src/components/PieChart";
+import TableComponent from "../src/components/Table/TableComponent";
 
 export default function Home() {
   return (
@@ -70,6 +71,9 @@ export default function Home() {
         <div className=" bg-white dark:bg-slate-800 pt-3 pb-4 pl-3 pr-3  w-1/3 mt-3 shadow-lg rounded-sm p-2">
           <PieChartComponent />
         </div>
+      </div>
+      <div className="pl-8 pr-4 pb-10">
+        <TableComponent />
       </div>
     </div>
   );
