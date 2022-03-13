@@ -72,7 +72,7 @@ export default function Home() {
           <PieChartComponent />
         </div>
       </div>
-      <div className="pl-8 pr-4 pb-10">
+      <div className="pl-8 pr-4  pb-10">
         <TableComponent />
       </div>
     </div>

@@ -4,6 +4,7 @@ import {
   BsFillLightningFill,
   BsGearFill,
   BsFillBarChartLineFill,
+  BsHddStack,
 } from "react-icons/bs";
 import { FaFire, FaPoo } from "react-icons/fa";
 
@@ -24,7 +25,11 @@ const SideBar = () => {
         text={"Add Vendor or Rider"}
         icon={<BsPlus size="32" />}
       />
-      <SideBarIcon url={"/User"} icon={<BsFillLightningFill size="20" />} />
+      <SideBarIcon
+        text={"Banners and logos Updates"}
+        url={"/Banners"}
+        icon={<BsHddStack size="20" />}
+      />
       <SideBarIcon url={"/Vendor"} icon={<FaPoo size="20" />} />
       <Divider />
       <SideBarIcon

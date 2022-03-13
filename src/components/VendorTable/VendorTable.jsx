@@ -1,8 +1,13 @@
 import { data } from "autoprefixer";
 import Image from "next/image";
 import React from "react";
+import VendorModal from "../VendorModal/VendorModal";
 
 function VendorTable({ data }) {
+  const [isModal, setIsModal] = React.useState(false);
+  function openModal() {
+    setIsModal(true);
+  }
   const myData = {
     headers: ["Name", "Title", "Statu", "Role"],
     body: [
@@ -15,6 +20,8 @@ function VendorTable({ data }) {
         data: {
           title: "Regional Paradigm Technician",
           text: "Optimization",
+
+          role: "Vendor",
         },
         active: "Active",
       },
@@ -27,6 +34,8 @@ function VendorTable({ data }) {
         data: {
           title: "Regional Paradigm Technician",
           text: "Optimization",
+
+          role: "Vendor",
         },
         active: "Active",
       },
@@ -39,6 +48,7 @@ function VendorTable({ data }) {
         data: {
           title: "Regional Paradigm Technician",
           text: "Optimization",
+          role: "Vendor",
         },
         active: "Active",
       },
@@ -51,6 +61,7 @@ function VendorTable({ data }) {
         data: {
           title: "Regional Paradigm Technician",
           text: "Optimization",
+          role: "Vendor",
         },
         active: "Active",
       },
@@ -58,9 +69,10 @@ function VendorTable({ data }) {
   };
 
   return (
-    <div>
-      <div class="flex flex-col ">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div className="vendorModal">
+      <VendorModal isModal={isModal} setIsModal={setIsModal} />
+      <div class="flex flex-col overflow-hidden ">
+        <div class="-my-2  sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow  overflow-hidden border-b dark:border-gray-500 border-gray-200 sm:rounded-lg">
               <table class="min-w-full divide-y dark:divide-gray-500 divide-gray-200">
@@ -73,12 +85,13 @@ function VendorTable({ data }) {
                       scope="col"
                       class=" px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
                     >
-                      <a
+                      <button
+                        onClick={openModal}
                         href="#"
                         class="text-white bg-green-600 px-4 py-1  hover:text-gray-400"
                       >
                         Add
-                      </a>
+                      </button>
                     </th>
                   </tr>
                 </thead>
@@ -144,7 +157,7 @@ const Body = ({ imgData, active, data }) => (
       </span>
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-sm dark:text-white text-gray-500">
-      Admin
+      {data.role}
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
       <a href="#" class="text-indigo-600  hover:text-indigo-900">

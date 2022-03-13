@@ -58,12 +58,12 @@ function TableComponent({ data }) {
   };
 
   return (
-    <div>
-      <div class="flex flex-col ">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div className="h-full">
+      <div class="flex flex-col overflow-hidden ">
+        <div class="-my-2 overflow-x-hidden sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow  overflow-hidden border-b dark:border-gray-500 border-gray-200 sm:rounded-lg">
-              <table class="min-w-full divide-y dark:divide-gray-500 divide-gray-200">
+              <table class="min-w-full divide-y  dark:divide-gray-500 divide-gray-200">
                 <thead class="dark:bg-slate-700 bg-gray-50">
                   <tr>
                     {myData.headers.map((item) => (
