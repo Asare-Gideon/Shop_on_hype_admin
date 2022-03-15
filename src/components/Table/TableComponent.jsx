@@ -59,8 +59,8 @@ function TableComponent({ data }) {
 
   return (
     <div className="h-full">
-      <div class="flex flex-col overflow-hidden ">
-        <div class="-my-2 overflow-x-hidden sm:-mx-6 lg:-mx-8">
+      <div class="flex flex-col overflow-y-hidden md:overflow-x-hidden overflow-x-visible  ">
+        <div class="-my-2 overflow-x-visible md:overflow-x-hidden sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow  overflow-hidden border-b dark:border-gray-500 border-gray-200 sm:rounded-lg">
               <table class="min-w-full divide-y  dark:divide-gray-500 divide-gray-200">

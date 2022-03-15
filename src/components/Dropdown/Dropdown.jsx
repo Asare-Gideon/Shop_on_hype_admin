@@ -2,10 +2,8 @@ import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 
-const people = [{ name: "All Users" }, { name: "Vendors" }, { name: "Riders" }];
-
-export default function Dropdown() {
-  const [selected, setSelected] = useState(people[0]);
+export default function Dropdown({ items }) {
+  const [selected, setSelected] = useState(items[0]);
 
   return (
     <div className="w-72 top-20">
@@ -29,7 +27,7 @@ export default function Dropdown() {
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute w-full py-1 mt-1 overflow-auto dark:bg-slate-800 text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {people.map((person, personIdx) => (
+              {items.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>

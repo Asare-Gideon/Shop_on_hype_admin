@@ -9,7 +9,7 @@ const TextEditor = () => {
   const [contentState, setContentState] = useState(raw);
 
   return (
-    <div className="w-3/5">
+    <div className="w-full  md:w-3/5 mb-4 md:mb-1">
       <header className="bg-[#282c34] dark:bg-slate-900 flex flex-col items-center justify-center min-h-[5vh] text-white text-xl">
         Text editor
       </header>

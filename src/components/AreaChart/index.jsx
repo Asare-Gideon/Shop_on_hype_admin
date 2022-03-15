@@ -56,7 +56,7 @@ function AreaChartComponent() {
   ];
 
   return (
-    <div className="dark:bg-slate-900">
+    <div className="dark:bg-slate-900 overflow-x-visible md:overflow-x-hidden">
       <ResponsiveContainer width={570} height={"95%"}>
         <AreaChart
           data={data}

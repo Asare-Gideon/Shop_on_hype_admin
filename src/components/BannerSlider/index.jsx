@@ -5,8 +5,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import SwiperCore, {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+} from "swiper";
 import Image from "next/image";
+
+SwiperCore.use([Autoplay]);
 
 export default function BannerSlider() {
   return (
@@ -19,10 +27,11 @@ export default function BannerSlider() {
         keyboard={true}
         loop={true}
         autoplay={{
-          delay: 2000,
+          delay: 4000,
+          disableOnInteraction: false,
         }}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="flex shadow-md rounded-lg w-full bg-slate-700  h-[25rem]"
+        className="flex shadow-md rounded-lg w-full bg-slate-700 h-[18rem] sm:h-[23rem]  md:h-[28rem]"
       >
         <SwiperSlide>
           <div className="w-full h-full">

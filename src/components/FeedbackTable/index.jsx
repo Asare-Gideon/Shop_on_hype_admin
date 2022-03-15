@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import VendorModal from "../VendorModal/VendorModal";
+import FeedbackModal from "../FeedbackModal";
 
-function VendorTable({ data }) {
+function FeedbackTable({ data }) {
   const [isModal, setIsModal] = React.useState(false);
   function openModal() {
     setIsModal(true);
@@ -68,10 +68,10 @@ function VendorTable({ data }) {
   };
 
   return (
-    <div className="">
-      <VendorModal isModal={isModal} setIsModal={setIsModal} />
+    <div className="vendorModal">
+      <FeedbackModal isModal={isModal} setIsModal={setIsModal} />
       <div class="flex flex-col overflow-y-hidden md:overflow-x-hidden overflow-x-visible ">
-        <div class="-my-2 overflow-x-visible md:overflow-x-hidden  sm:-mx-6 lg:-mx-8">
+        <div class="-my-2 overflow-x-visible md:overflow-x-hidden sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
             <div class="shadow  border-b dark:border-gray-500 border-gray-200 sm:rounded-lg">
               <table class="min-w-full divide-y dark:divide-gray-500 divide-gray-200">
@@ -83,21 +83,14 @@ function VendorTable({ data }) {
                     <th
                       scope="col"
                       class=" px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button
-                        onClick={openModal}
-                        href="#"
-                        class="text-white bg-green-600 px-4 py-1  hover:text-gray-400"
-                      >
-                        Add
-                      </button>
-                    </th>
+                    ></th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y dark:bg-slate-800 dark:divide-gray-500 divide-gray-200">
                   {myData.body.map((item) => (
                     <tr>
                       <Body
+                        handleModal={openModal}
                         imgData={item.imgData}
                         active={item.active}
                         data={item.data}
@@ -123,7 +116,7 @@ const Header = ({ name }) => (
   </th>
 );
 
-const Body = ({ imgData, active, data }) => (
+const Body = ({ imgData, active, data, handleModal }) => (
   <>
     <td class="px-6 py-4 whitespace-nowrap">
       <div class="flex items-center">
@@ -159,10 +152,14 @@ const Body = ({ imgData, active, data }) => (
       {data.role}
     </td>
     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-      <a href="#" class="text-indigo-600  hover:text-indigo-900">
-        Edit
+      <a
+        onClick={handleModal}
+        href="#"
+        class="text-indigo-600  hover:text-indigo-900"
+      >
+        View msg
       </a>
     </td>
   </>
 );
-export default VendorTable;
+export default FeedbackTable;

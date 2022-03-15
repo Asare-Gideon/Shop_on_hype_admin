@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   FaSearch,
   FaHashtag,
@@ -41,7 +42,11 @@ const Search = () => (
     <FaSearch size="18" className="text-secondary my-auto" />
   </div>
 );
-const BellIcon = () => <FaRegBell size="24" className="top-navigation-icon" />;
+const BellIcon = () => (
+  <Link href="/Notification">
+    <FaRegBell size="24" className="top-navigation-icon" />
+  </Link>
+);
 const UserCircle = () => (
   <FaUserCircle size="24" className="top-navigation-icon" />
 );

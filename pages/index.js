@@ -1,7 +1,4 @@
 import Head from "next/head";
-import SideBar from "../src/components/SideBar";
-import Channelbar from "../src/components/ChannelBar";
-import ContentContainer from "../src/components/ContentContainer";
 import AreaChartComponent from "../src/components/AreaChart";
 import {
   BsFillGiftFill,
@@ -16,13 +13,13 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="ml-8 mt-3">
-        <h1 className="text-gray-600 font-semibold text-2xl dark:text-green-50">
-          Analytices
+        <h1 className="text-gray-600 text-center md:text-left font-semibold text-2xl dark:text-green-50">
+          Analytics
         </h1>
       </div>
-      <div className="flex pb-10 justify-evenly">
-        <div className=" bg-white dark:bg-slate-800 pt-3 pb-4 pl-2 pr-2  w-3/5 mt-2 shadow-lg rounded-sm p-2">
-          <div className="w-full flex justify-between">
+      <div className="flex flex-col xl:flex-row xl:justify-evenly pb-10 items-center justify-center">
+        <div className=" bg-white dark:bg-slate-800 pt-3 pb-4 pl-2 pr-2 w-full xl:w-3/5 mt-2 shadow-lg rounded-sm p-2">
+          <div className="w-full flex flex-col md:flex-row justify-between">
             <div>
               <div className="mb-6">
                 <h3 className="text-gray-500 dark:text-gray-100 text-lg">
@@ -42,9 +39,10 @@ export default function Home() {
                 </h3>
               </div>
             </div>
+
             <AreaChartComponent />
           </div>
-          <div className="mt-1 flex justify-between ">
+          <div className="mt-1 flex flex-wrap md:flex-nowrap justify-center md:justify-between ">
             <BottomItem
               icon={<BsFillGiftFill size={"23"} color="green" />}
               title={"Wallet Balance"}
@@ -68,11 +66,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className=" bg-white dark:bg-slate-800 pt-3 pb-4 pl-3 pr-3  w-1/3 mt-3 shadow-lg rounded-sm p-2">
+        <div className=" bg-white dark:bg-slate-800 pt-3 pb-4 pl-3 pr-3 w-full md:w-3/5 xl:w-1/3 mt-3 shadow-lg rounded-sm p-2">
           <PieChartComponent />
         </div>
       </div>
-      <div className="pl-8 pr-4  pb-10">
+      <div className="xl:pl-8 xl:pr-4 overflow-x-visible xl:overflow-x-hidden  pb-10">
         <TableComponent />
       </div>
     </div>
@@ -93,7 +91,7 @@ const SideHeading = ({ name, text }) => (
 );
 
 const BottomItem = ({ icon, title, text }) => (
-  <div className="mt-2 mr-1 flex items-center shadow-md w-1/4 pl-3 pt-2 pb-2 dark:bg-slate-900">
+  <div className="mt-2 md:mr-1 flex items-center shadow-md md:w-1/4 w-full sm:w-4/6 pl-3 pt-2 pb-2 dark:bg-slate-900">
     <div className="mr-2">{icon}</div>
     <div>
       <h3 className="text-gray-500 text-[15px] dark:text-zinc-50	"> {title} </h3>

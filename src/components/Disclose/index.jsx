@@ -3,7 +3,7 @@ import { ChevronUpIcon } from "@heroicons/react/solid";
 
 export default function Disclose() {
   return (
-    <div className="w-2/5 ml-6 ">
+    <div className="w-full md:w-2/5 md:ml-6 ">
       <div className="w-full  p-2 mx-auto dark:bg-slate-800 bg-white rounded-lg">
         <Disclosure>
           {({ open }) => (

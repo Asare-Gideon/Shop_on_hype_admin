@@ -7,12 +7,13 @@ import {
   BsHddStack,
 } from "react-icons/bs";
 import { FaFire, FaPoo } from "react-icons/fa";
+import { RiFeedbackFill } from "react-icons/ri";
 
 const SideBar = () => {
   return (
     <div
       className="fixed top-0 left-0 h-screen w-16 flex flex-col
-                  bg-white dark:bg-gray-900 shadow-lg z-[80]"
+                  bg-white overflow-visible dark:bg-gray-900 shadow-lg z-[80]"
     >
       <SideBarIcon
         text={"Analytic Screen"}
@@ -30,7 +31,11 @@ const SideBar = () => {
         url={"/Banners"}
         icon={<BsHddStack size="20" />}
       />
-      <SideBarIcon url={"/Vendor"} icon={<FaPoo size="20" />} />
+      <SideBarIcon
+        text={"Feedback"}
+        url={"/Feedback"}
+        icon={<RiFeedbackFill size="20" />}
+      />
       <Divider />
       <SideBarIcon
         url={"/Settings"}

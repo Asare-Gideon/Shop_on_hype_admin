@@ -34,7 +34,7 @@ function Banners() {
           Edit Banner images
         </button>
       </div>
-      <div className="mt-5 flex justify-between p-4">
+      <div className="mt-5 flex flex-col md:flex-row justify-center md:justify-between md:p-4 p-1">
         <TextEditor />
         <Disclose />
       </div>

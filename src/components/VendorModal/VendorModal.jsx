@@ -14,7 +14,7 @@ export default function VendorModal({ isModal, setIsModal }) {
           className="fixed inset-0 z-10 overflow-y-auto"
           onClose={closeModal}
         >
-          <div className="min-h-screen bg-gray-400 dark:bg-slate-900 px-4 text-center">
+          <div className="min-h-screen bg-gray-400 dark:bg-slate-900 px-4 ml-16 md:ml-0 text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -49,13 +49,13 @@ export default function VendorModal({ isModal, setIsModal }) {
                   Fill user credential below
                 </Dialog.Title>
                 <div className="mt-2">
-                  <div className="flex p-2">
+                  <div className="flex flex-col md:flex-row md:p-2 mb-4">
                     <input
                       id="name"
                       name="name"
                       type="text"
                       required
-                      className="appearance-none mr-3 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                      className="appearance-none md:mr-3 mb-4 md:mb-0 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                       placeholder="Full Name"
                     />
                     <input
@@ -63,17 +63,17 @@ export default function VendorModal({ isModal, setIsModal }) {
                       name="email"
                       type="email"
                       required
-                      className="appearance-none dark:bg-gray-300 ml-3 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                      className="appearance-none dark:bg-gray-300 md:ml-3 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                       placeholder="Email"
                     />
                   </div>
-                  <div className="flex p-2">
+                  <div className="flex flex-col md:flex-row md:p-2">
                     <input
                       id="phoneNumber"
                       name="phoneNumber"
                       type="text"
                       required
-                      className="appearance-none mr-3 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                      className="appearance-none mb-4 md:mb-0 md:mr-3 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                       placeholder="First phone number"
                     />
                     <input
@@ -81,7 +81,7 @@ export default function VendorModal({ isModal, setIsModal }) {
                       name="secondPhoneNumber"
                       type="text"
                       required
-                      className="appearance-none ml-3 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
+                      className="appearance-none md:ml-3 dark:bg-gray-300 rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                       placeholder="Second Phone Number (optional)"
                     />
                   </div>

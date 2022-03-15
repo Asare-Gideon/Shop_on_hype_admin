@@ -67,7 +67,7 @@ function PieChartComponent() {
         </ResponsiveContainer>
       </div>
       <div className="flex justify-around flex-wrap">
-        <div className=" shadow-md pl-5 pr-5 mt-3 dark:bg-slate-900">
+        <div className=" shadow-md w-full pl-5 pr-5 mt-3 md:w-max dark:bg-slate-900">
           <h2 className="text-xl text-gray-900 font-semibold dark:text-zinc-200">
             40%
           </h2>
@@ -78,7 +78,7 @@ function PieChartComponent() {
             </h4>
           </div>
         </div>
-        <div className=" shadow-md pl-5 pr-5 mt-3 dark:bg-slate-900">
+        <div className=" shadow-md w-full pl-5 pr-5 md:w-max mt-3 dark:bg-slate-900">
           <h2 className="text-xl text-gray-900 font-semibold dark:text-zinc-200">
             10%
           </h2>
@@ -89,7 +89,7 @@ function PieChartComponent() {
             </h4>
           </div>
         </div>
-        <div className=" shadow-md pl-5 pr-5 mt-3 dark:bg-slate-900">
+        <div className=" shadow-md pl-5 w-full md:w-max pr-5 mt-3 dark:bg-slate-900">
           <h2 className="text-xl text-gray-900 font-semibold dark:text-zinc-200">
             30%
           </h2>
@@ -100,7 +100,7 @@ function PieChartComponent() {
             </h4>
           </div>
         </div>
-        <div className="shadow-md pl-5 pr-5 ml-2 mt-3 dark:bg-slate-900">
+        <div className="shadow-md pl-5 pr-5 w-full  md:w-max md:ml-2 mt-3 dark:bg-slate-900">
           <h2 className="text-xl text-gray-900 font-semibold dark:text-zinc-200">
             20%
           </h2>
