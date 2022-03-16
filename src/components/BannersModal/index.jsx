@@ -16,7 +16,7 @@ export default function BannerModal({ isModal, setIsModal }) {
           className="fixed inset-0 z-10 overflow-y-auto"
           onClose={closeModal}
         >
-          <div className="min-h-screen bg-gray-400 dark:bg-slate-900 px-4 text-center">
+          <div className="min-h-screen ml-16 md:ml-0 bg-gray-400 dark:bg-slate-900 px-4 text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -48,10 +48,10 @@ export default function BannerModal({ isModal, setIsModal }) {
                   as="h3"
                   className="text-lg font-medium dark:text-gray-100 leading-6 text-gray-900"
                 >
-                  Fill user credential below
+                  Change Banner slider images
                 </Dialog.Title>
                 <div className="mt-2">
-                  <div className="flex flex-wrap">
+                  <div className="flex justify-center md:justify-start  flex-wrap">
                     <div className="max-w-fit mr-6 mb-4 ml-4 relative z-20  ">
                       <Image src="/img/img3.jpg" width={200} height={100} />
                       <button className="bg-green-800 absolute right-0 outline-none top-1 z-44 rounded-full">

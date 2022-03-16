@@ -11,9 +11,6 @@
 }
 
 @layer components {
-  .tablecont: {
-    @apply overflow-x-visible;
-  }
   .chart-container {
     @apply flex flex-1 sm:flex-wrap  justify-between;
   }
