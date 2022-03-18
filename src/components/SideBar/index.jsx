@@ -8,6 +8,7 @@ import {
 } from "react-icons/bs";
 import { FaFire, FaPoo } from "react-icons/fa";
 import { RiFeedbackFill } from "react-icons/ri";
+import { MdCategory } from "react-icons/md";
 
 const SideBar = () => {
   return (
@@ -38,9 +39,9 @@ const SideBar = () => {
       />
       <Divider />
       <SideBarIcon
-        url={"/Settings"}
-        text={"Settings"}
-        icon={<BsGearFill size="22" />}
+        url={"/Categories"}
+        text={"Categories"}
+        icon={<MdCategory size="22" />}
       />
     </div>
   );

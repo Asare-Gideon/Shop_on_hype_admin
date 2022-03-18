@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import CategoryModal from "../CategoryModal";
 import VendorModal from "../VendorModal/VendorModal";
 
-function VendorTable({ data }) {
+function CategoryTable({ data }) {
   const [isModal, setIsModal] = React.useState(false);
   function openModal() {
     setIsModal(true);
@@ -13,12 +14,10 @@ function VendorTable({ data }) {
       {
         imgData: {
           name: "John Cooper",
-          email: "john33@gmail.com",
           src: "",
         },
         data: {
           title: "Regional Paradigm Technician",
-          text: "Optimization",
 
           role: "Vendor",
         },
@@ -27,12 +26,10 @@ function VendorTable({ data }) {
       {
         imgData: {
           name: "John Cooper",
-          email: "john33@gmail.com",
           src: "",
         },
         data: {
           title: "Regional Paradigm Technician",
-          text: "Optimization",
 
           role: "Vendor",
         },
@@ -41,12 +38,10 @@ function VendorTable({ data }) {
       {
         imgData: {
           name: "John Cooper",
-          email: "john33@gmail.com",
           src: "",
         },
         data: {
           title: "Regional Paradigm Technician",
-          text: "Optimization",
           role: "Vendor",
         },
         active: "Active",
@@ -54,12 +49,10 @@ function VendorTable({ data }) {
       {
         imgData: {
           name: "John Cooper",
-          email: "john33@gmail.com",
           src: "",
         },
         data: {
           title: "Regional Paradigm Technician",
-          text: "Optimization",
           role: "Vendor",
         },
         active: "Active",
@@ -69,7 +62,7 @@ function VendorTable({ data }) {
 
   return (
     <div className="">
-      <VendorModal isModal={isModal} setIsModal={setIsModal} />
+      <CategoryModal isModal={isModal} setIsModal={setIsModal} />
       <div class="flex flex-col overflow-y-hidden md:overflow-x-hidden overflow-x-visible ">
         <div class="-my-2 overflow-x-visible md:overflow-x-hidden  sm:-mx-6 lg:-mx-8">
           <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -141,13 +134,11 @@ const Body = ({ imgData, active, data }) => (
             {" "}
             {imgData.name}{" "}
           </div>
-          <div class="text-sm text-gray-500"> {imgData.email} </div>
         </div>
       </div>
     </td>
     <td class="px-6 py-4 whitespace-nowrap">
       <div class="text-sm dark:text-white text-gray-900"> {data.title}</div>
-      <div class="text-sm dark:text-gray-500 text-gray-500">{data.text}</div>
     </td>
     <td class="px-6 py-4 whitespace-nowrap">
       <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full dark:bg-green-800 dark:text-white bg-green-100 text-green-800">
@@ -165,4 +156,4 @@ const Body = ({ imgData, active, data }) => (
     </td>
   </>
 );
-export default VendorTable;
+export default CategoryTable;
